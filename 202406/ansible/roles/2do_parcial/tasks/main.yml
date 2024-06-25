@@ -1,0 +1,14 @@
+---
+# tasks file for 2do_parcial
+
+- debug:
+    msg: "Tareas del 2do Parcial"
+  tags:
+    - cartel
+
+- debug:
+    msg: "archivo a incluir Nro: {{ NroPrueba }}"
+
+- name: "Incluyo archivo prueba_NroPrueba"
+  include_tasks: prueba_{{ NroPrueba }}.yml
+

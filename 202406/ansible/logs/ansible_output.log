@@ -1,0 +1,499 @@
+2024-06-24 18:08:06,499 p=3444395 u=upszot n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 18:08:06,598 p=3444395 u=upszot n=ansible | PLAY [all] **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:06,609 p=3444395 u=upszot n=ansible | TASK [Gathering Facts] **********************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,746 p=3444395 u=upszot n=ansible | ok: [localhost]
+2024-06-24 18:08:07,775 p=3444395 u=upszot n=ansible | TASK [include_role : 2do_parcial] ***********************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,805 p=3444395 u=upszot n=ansible | TASK [2do_parcial : debug] ******************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,817 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 18:08:07,836 p=3444395 u=upszot n=ansible | TASK [Otra tarea] ***************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,851 p=3444395 u=upszot n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | PLAY RECAP **********************************************************************************************************************************************************************************************************************************
+2024-06-24 18:08:07,885 p=3444395 u=upszot n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:01:11,789 p=7239 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:01:12,062 p=7239 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:01:12,105 p=7239 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:01:12,322 p=7239 u=brian n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbrian@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-06-24 21:01:13,744 p=7239 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:01:13,775 p=7239 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:01:13,816 p=7239 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:01:13,832 p=7239 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:01:13,843 p=7239 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:01:13,856 p=7239 u=brian n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'NroPrueba' is undefined. 'NroPrueba' is undefined\n\nThe error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 15, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2024-06-24 21:01:13,857 p=7239 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:01:13,857 p=7239 u=brian n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:01:13,857 p=7239 u=brian n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:04:38,141 p=7426 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:04:38,262 p=7426 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:04:38,289 p=7426 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:04:38,486 p=7426 u=brian n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbrian@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-06-24 21:04:39,560 p=7426 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:04:39,591 p=7426 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:04:39,632 p=7426 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:04:39,647 p=7426 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:04:39,658 p=7426 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:04:39,671 p=7426 u=brian n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'NroPrueba' is undefined. 'NroPrueba' is undefined\n\nThe error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2024-06-24 21:04:39,672 p=7426 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:04:39,672 p=7426 u=brian n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:04:39,672 p=7426 u=brian n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:08:13,001 p=7704 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:08:13,124 p=7704 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:08:13,155 p=7704 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:08:13,277 p=7704 u=brian n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbrian@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-06-24 21:08:14,683 p=7704 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:08:14,714 p=7704 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:08:14,754 p=7704 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:08:14,772 p=7704 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:08:14,783 p=7704 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:08:14,796 p=7704 u=brian n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'NroPrueba' is undefined. 'NroPrueba' is undefined\n\nThe error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2024-06-24 21:08:14,797 p=7704 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:08:14,797 p=7704 u=brian n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:08:14,797 p=7704 u=brian n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:10:40,714 p=7935 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:10:40,834 p=7935 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:10:40,861 p=7935 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:10:40,982 p=7935 u=brian n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbrian@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-06-24 21:10:42,132 p=7935 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:10:42,163 p=7935 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:10:42,201 p=7935 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:10:42,219 p=7935 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:10:42,242 p=7935 u=brian n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************
+2024-06-24 21:10:42,257 p=7935 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 21:10:42,298 p=7935 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:10:42,298 p=7935 u=brian n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:10:42,299 p=7935 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:12:29,813 p=8093 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:12:29,932 p=8093 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:12:29,960 p=8093 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:12:30,084 p=8093 u=brian n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbrian@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-06-24 21:12:31,238 p=8093 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:12:31,269 p=8093 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:12:31,306 p=8093 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:12:31,323 p=8093 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:12:31,344 p=8093 u=brian n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************
+2024-06-24 21:12:31,360 p=8093 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 21:12:31,400 p=8093 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:12:31,401 p=8093 u=brian n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:12:31,401 p=8093 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:12:57,701 p=8173 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:12:57,821 p=8173 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:12:57,848 p=8173 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:12:57,972 p=8173 u=brian n=ansible | fatal: [127.0.0.1]: UNREACHABLE! => {"changed": false, "msg": "Failed to connect to the host via ssh: Warning: Permanently added '127.0.0.1' (ED25519) to the list of known hosts.\r\nbrian@127.0.0.1: Permission denied (publickey,gssapi-keyex,gssapi-with-mic,password).", "unreachable": true}
+2024-06-24 21:12:59,341 p=8173 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:12:59,371 p=8173 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:12:59,409 p=8173 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:12:59,426 p=8173 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:12:59,448 p=8173 u=brian n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************
+2024-06-24 21:12:59,464 p=8173 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 21:12:59,504 p=8173 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:12:59,504 p=8173 u=brian n=ansible | 127.0.0.1                  : ok=0    changed=0    unreachable=1    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:12:59,504 p=8173 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:15:35,703 p=8472 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:15:35,825 p=8472 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:15:35,851 p=8472 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:15:37,137 p=8472 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:15:37,314 p=8472 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:15:37,365 p=8472 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:15:37,428 p=8472 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:15:37,446 p=8472 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:15:37,461 p=8472 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:15:37,491 p=8472 u=brian n=ansible | TASK [Otra tarea] ******************************************************************************************************************************************************
+2024-06-24 21:15:37,512 p=8472 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 21:15:37,524 p=8472 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Despues de la ejecucion del rol"
+}
+2024-06-24 21:15:37,603 p=8472 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:15:37,603 p=8472 u=brian n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:15:37,603 p=8472 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:16:41,480 p=8849 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:16:41,598 p=8849 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:16:41,626 p=8849 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:16:42,915 p=8849 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:16:43,084 p=8849 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:16:43,136 p=8849 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:16:43,199 p=8849 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:16:43,219 p=8849 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:16:43,230 p=8849 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:16:43,242 p=8849 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:16:43,261 p=8849 u=brian n=ansible | fatal: [127.0.0.1]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'NroPrueba' is undefined. 'NroPrueba' is undefined\n\nThe error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2024-06-24 21:16:43,269 p=8849 u=brian n=ansible | fatal: [localhost]: FAILED! => {"msg": "The task includes an option with an undefined variable. The error was: 'NroPrueba' is undefined. 'NroPrueba' is undefined\n\nThe error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/main.yml': line 7, column 3, but may\nbe elsewhere in the file depending on the exact syntax problem.\n\nThe offending line appears to be:\n\n\n- debug:\n  ^ here\n"}
+2024-06-24 21:16:43,271 p=8849 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:16:43,271 p=8849 u=brian n=ansible | 127.0.0.1                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:16:43,271 p=8849 u=brian n=ansible | localhost                  : ok=2    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:21:35,522 p=9339 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:21:40,075 p=9339 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:21:40,101 p=9339 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:21:41,460 p=9339 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:21:41,612 p=9339 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:21:41,662 p=9339 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:21:41,725 p=9339 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:21:41,744 p=9339 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:21:41,754 p=9339 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:21:41,765 p=9339 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:21:41,783 p=9339 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:21:41,797 p=9339 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:21:41,810 p=9339 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:21:41,860 p=9339 u=brian n=ansible | ERROR! conflicting action statements: hosts, tasks
+
+The error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/prueba_1.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Crear directorios en el servidor
+  ^ here
+
+2024-06-24 21:23:01,051 p=9737 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:23:03,980 p=9737 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:23:04,010 p=9737 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:23:05,284 p=9737 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:23:05,537 p=9737 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:23:05,587 p=9737 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:23:05,649 p=9737 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:23:05,667 p=9737 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:23:05,678 p=9737 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:23:05,689 p=9737 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:23:05,708 p=9737 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: prueba1"
+}
+2024-06-24 21:23:05,722 p=9737 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: prueba1"
+}
+2024-06-24 21:23:05,735 p=9737 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:23:05,782 p=9737 u=brian n=ansible | fatal: [127.0.0.1]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba1.yml' on the Ansible Controller."}
+2024-06-24 21:23:05,782 p=9737 u=brian n=ansible | fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba1.yml' on the Ansible Controller."}
+2024-06-24 21:23:05,783 p=9737 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:23:05,783 p=9737 u=brian n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:23:05,784 p=9737 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:23:24,935 p=10018 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:23:26,940 p=10018 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:23:26,968 p=10018 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:23:28,281 p=10018 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:23:28,437 p=10018 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:23:28,487 p=10018 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:23:28,551 p=10018 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:23:28,569 p=10018 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:23:28,581 p=10018 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:23:28,592 p=10018 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:23:28,612 p=10018 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:23:28,625 p=10018 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:23:28,638 p=10018 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:23:28,688 p=10018 u=brian n=ansible | ERROR! conflicting action statements: hosts, tasks
+
+The error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/prueba_1.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Crear directorios en el servidor
+  ^ here
+
+2024-06-24 21:26:07,251 p=10387 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:26:08,670 p=10387 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:26:08,697 p=10387 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:26:09,950 p=10387 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:26:10,107 p=10387 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:26:10,157 p=10387 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:26:10,221 p=10387 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:26:10,239 p=10387 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:26:10,250 p=10387 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:26:10,262 p=10387 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:26:10,281 p=10387 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:26:10,294 p=10387 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:26:10,307 p=10387 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:26:10,357 p=10387 u=brian n=ansible | ERROR! conflicting action statements: hosts, tasks
+
+The error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/prueba_1.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Crear directorios en el servidor
+  ^ here
+
+2024-06-24 21:28:15,565 p=10687 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:28:19,664 p=10687 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:28:19,690 p=10687 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:28:20,955 p=10687 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:28:21,110 p=10687 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:28:21,161 p=10687 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:28:21,224 p=10687 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:28:21,242 p=10687 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:28:21,253 p=10687 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:28:21,265 p=10687 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:28:21,284 p=10687 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: prueba_1"
+}
+2024-06-24 21:28:21,298 p=10687 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: prueba_1"
+}
+2024-06-24 21:28:21,311 p=10687 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:28:21,359 p=10687 u=brian n=ansible | fatal: [127.0.0.1]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml' on the Ansible Controller."}
+2024-06-24 21:28:21,359 p=10687 u=brian n=ansible | fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml' on the Ansible Controller."}
+2024-06-24 21:28:21,360 p=10687 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:28:21,360 p=10687 u=brian n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:28:21,360 p=10687 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:30:05,054 p=11038 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:30:06,913 p=11038 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:30:06,942 p=11038 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:30:08,410 p=11038 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:30:08,483 p=11038 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:30:08,533 p=11038 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:30:08,597 p=11038 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:30:08,615 p=11038 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:30:08,628 p=11038 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:30:08,639 p=11038 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:30:08,658 p=11038 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:30:08,678 p=11038 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:30:08,690 p=11038 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:30:08,740 p=11038 u=brian n=ansible | ERROR! conflicting action statements: hosts, tasks
+
+The error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/prueba_1.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Crear directorios en el servidor
+  ^ here
+
+2024-06-24 21:30:12,639 p=11318 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:30:17,425 p=11318 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:30:17,451 p=11318 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:30:18,743 p=11318 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:30:18,874 p=11318 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:30:18,924 p=11318 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:30:18,988 p=11318 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:30:19,006 p=11318 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:30:19,017 p=11318 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:30:19,028 p=11318 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:30:19,048 p=11318 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: prueba_1"
+}
+2024-06-24 21:30:19,060 p=11318 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: prueba_1"
+}
+2024-06-24 21:30:19,074 p=11318 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:30:19,121 p=11318 u=brian n=ansible | fatal: [127.0.0.1]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml' on the Ansible Controller."}
+2024-06-24 21:30:19,122 p=11318 u=brian n=ansible | fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml' on the Ansible Controller."}
+2024-06-24 21:30:19,123 p=11318 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:30:19,123 p=11318 u=brian n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:30:19,123 p=11318 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:38:15,262 p=12125 u=brian n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-06-24 21:38:20,583 p=12125 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:38:20,583 p=12125 u=brian n=ansible | skipping: no hosts matched
+2024-06-24 21:38:20,583 p=12125 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:38:31,000 p=12132 u=brian n=ansible | [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
+2024-06-24 21:38:33,303 p=12132 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:38:33,303 p=12132 u=brian n=ansible | skipping: no hosts matched
+2024-06-24 21:38:33,304 p=12132 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:38:56,676 p=12138 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:38:58,016 p=12138 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:38:58,043 p=12138 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:38:59,316 p=12138 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:38:59,555 p=12138 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:38:59,604 p=12138 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:38:59,666 p=12138 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:38:59,685 p=12138 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:38:59,695 p=12138 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:38:59,707 p=12138 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:38:59,726 p=12138 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:38:59,739 p=12138 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: 1"
+}
+2024-06-24 21:38:59,752 p=12138 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:38:59,801 p=12138 u=brian n=ansible | ERROR! conflicting action statements: hosts, tasks
+
+The error appears to be in '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/prueba_1.yml': line 2, column 3, but may
+be elsewhere in the file depending on the exact syntax problem.
+
+The offending line appears to be:
+
+---
+- name: Crear directorios en el servidor
+  ^ here
+
+2024-06-24 21:39:02,043 p=12423 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:39:06,400 p=12423 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:39:06,429 p=12423 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:39:08,208 p=12423 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:39:08,387 p=12423 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:39:08,438 p=12423 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:39:08,501 p=12423 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:39:08,520 p=12423 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:39:08,531 p=12423 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:39:08,542 p=12423 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:39:08,573 p=12423 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: prueba_1"
+}
+2024-06-24 21:39:08,574 p=12423 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: prueba_1"
+}
+2024-06-24 21:39:08,587 p=12423 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:39:08,634 p=12423 u=brian n=ansible | fatal: [127.0.0.1]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml' on the Ansible Controller."}
+2024-06-24 21:39:08,635 p=12423 u=brian n=ansible | fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml' on the Ansible Controller."}
+2024-06-24 21:39:08,636 p=12423 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:39:08,636 p=12423 u=brian n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:39:08,636 p=12423 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:42:14,513 p=12789 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:42:14,629 p=12789 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:42:14,656 p=12789 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:42:20,221 p=12789 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:42:20,384 p=12789 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:42:20,436 p=12789 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:42:20,503 p=12789 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:42:20,522 p=12789 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:42:20,533 p=12789 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:42:20,545 p=12789 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:42:20,643 p=12789 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: "
+}
+2024-06-24 21:42:20,645 p=12789 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: "
+}
+2024-06-24 21:42:20,658 p=12789 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:42:20,726 p=12789 u=brian n=ansible | fatal: [127.0.0.1]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_.yml' on the Ansible Controller."}
+2024-06-24 21:42:20,726 p=12789 u=brian n=ansible | fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_.yml' on the Ansible Controller."}
+2024-06-24 21:42:20,727 p=12789 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:42:20,727 p=12789 u=brian n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:42:20,728 p=12789 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:42:30,850 p=13069 u=brian n=ansible | [WARNING]: A duplicate localhost-like entry was found (localhost). First found localhost was 127.0.0.1
+
+2024-06-24 21:42:30,970 p=13069 u=brian n=ansible | PLAY [all] *************************************************************************************************************************************************************
+2024-06-24 21:42:30,996 p=13069 u=brian n=ansible | TASK [Gathering Facts] *************************************************************************************************************************************************
+2024-06-24 21:42:32,268 p=13069 u=brian n=ansible | ok: [localhost]
+2024-06-24 21:42:32,426 p=13069 u=brian n=ansible | ok: [127.0.0.1]
+2024-06-24 21:42:32,476 p=13069 u=brian n=ansible | TASK [include_role : 2do_parcial] **************************************************************************************************************************************
+2024-06-24 21:42:32,540 p=13069 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:42:32,558 p=13069 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:42:32,584 p=13069 u=brian n=ansible | ok: [localhost] => {
+    "msg": "Tareas del 2do Parcial"
+}
+2024-06-24 21:42:32,595 p=13069 u=brian n=ansible | TASK [2do_parcial : debug] *********************************************************************************************************************************************
+2024-06-24 21:42:32,635 p=13069 u=brian n=ansible | ok: [127.0.0.1] => {
+    "msg": "archivo a incluir Nro: "
+}
+2024-06-24 21:42:32,648 p=13069 u=brian n=ansible | ok: [localhost] => {
+    "msg": "archivo a incluir Nro: "
+}
+2024-06-24 21:42:32,661 p=13069 u=brian n=ansible | TASK [2do_parcial : Incluyo archivo prueba_NroPrueba] ******************************************************************************************************************
+2024-06-24 21:42:32,728 p=13069 u=brian n=ansible | fatal: [127.0.0.1]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_.yml' on the Ansible Controller."}
+2024-06-24 21:42:32,728 p=13069 u=brian n=ansible | fatal: [localhost]: FAILED! => {"reason": "Could not find or access '/home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_.yml' on the Ansible Controller."}
+2024-06-24 21:42:32,729 p=13069 u=brian n=ansible | PLAY RECAP *************************************************************************************************************************************************************
+2024-06-24 21:42:32,730 p=13069 u=brian n=ansible | 127.0.0.1                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   
+2024-06-24 21:42:32,730 p=13069 u=brian n=ansible | localhost                  : ok=3    changed=0    unreachable=0    failed=1    skipped=0    rescued=0    ignored=0   

@@ -1,0 +1,14 @@
+---
+- hosts: all
+
+  vars:
+    NroPrueba: "{{ lookup('env', 'NroPrueba') | default('1') }}"
+
+  tasks:
+    - include_role:
+        name: 2do_parcial
+    
+    - name: "Otra tarea"
+      debug:
+        msg: "Después de la ejecución del rol"
+

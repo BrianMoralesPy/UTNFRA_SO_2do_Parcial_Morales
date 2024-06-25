@@ -1,0 +1,12 @@
+---
+- name: Crear directorios en el servidor
+  hosts: servers
+  tasks:
+    - name: Crear la estructura de directorios
+      file:
+        path: "{{ item }}"
+        state: directory
+      loop:
+        - /tmp/2doParcial/
+        - /tmp/ejercicio1/alumno
+        - /tmp/ejercicio1/equipo

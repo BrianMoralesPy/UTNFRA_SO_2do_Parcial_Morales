@@ -1,0 +1,291 @@
+pwd
+git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+./UTN-FRA_SO_Examenes/202406/script_Precondicion.sh
+source ~/.bashrc
+cd UTN-FRA_SO_Examenes/202406/
+cd
+sudo fdisk -l
+sudo fdisk /dev/sdc
+sudo fdisk /dev/sdb
+p
+sudo fdisk /dev/sdc
+sudo fdisk /dev/sdb
+sudo fdisk -l
+sudo fdisk /dev/sdb1
+sudo fdisk /dev/sdb
+sudo fdisk /dev/sdc
+sudo pvcreate /dev/sdb1
+sudo pvcreate /dev/sdb1 
+pvcreate /dev/sdb1
+sudo pvcreate /dev/sdb1
+sudo pvc
+sudo pvs
+sudo vgcreate vgdatos /dev/sdb1
+pvs
+sudo pvs
+sudo vgs
+sudo pvcreate /dev/sdc1
+sudo pvs
+sudo pvremove /dev/sdc1
+sudo pvs
+sudo fdisk /dev/sdc
+sudo pvcreate /dev/sdc1
+pvs
+sudo pvs
+sudo pvremove /dev/sdc1
+sudo fdisk /dev/sdc
+sudo pvcreate /dev/sdc1
+sudo pvs
+sudo vgremove vgdatos
+sudo vgs
+sudo vps
+sudo vgs
+sudo pvs
+sudo vgcreate vg_datos  /dev/sdb1 /dev/sdc1
+sudo vgs
+sudo pvs
+sudo pvcreate dev/sdc2
+sudo pvcreate /dev/sdc2
+sudo pvs
+sudo vgcreate vg_temp /dev/sdc2
+sudo pvs
+sudo lvcreate  -L +1,50G vg_datos -n lv_docker
+sudo pvs
+LVS
+sudo lvs
+sudo lvremove /dev/vg_datos/lv_docker
+sudo lvs
+sudo pvs
+sudo lvcreate  -L +3M vg_datos -n lv_docker
+sudo pvs
+sudo lvs
+sudo lvcreate -l +100%FREE vg_datos -n lv_workareas
+sudo lvs
+sudo lvcreate -l +100%FREE vg_temp  -n lv_swap
+sudo lvs
+sudo mkfs.ext4 /dev/mapper/vg_datos-lv_docker
+sudo mkfs.ext4 /dev/mapper/vg_datos-lv_workareas
+sudo mkswap /dev/mapper/vg_temp-lv_swap
+swapon /dev/mapper/vg_temp-lv_swap
+sudo swapon /dev/mapper/vg_temp-lv_swap
+sudo swapon -s
+free -h
+mkdir /work
+sudo mkdir /work
+sudo mount /mapper/vg_datos-lv_workareas /work
+sudo mount /mapper/vg_datos-lv_workareas work
+sudo mount /mapper/vg_datos-lv_workareas /work/
+sudo mount dev/mapper/vg_datos-lv_workareas /work
+sudo mount /dev/mapper/vg_datos-lv_workareas /work
+df -h
+sudo mount /dev/mapper/vg_datos-lv_docker /var/lib/docker/
+sudo ls -l /var/lib/docker/
+sudo systemctl restar docker
+sudo systemctl restart docker
+sudo ls -l /var/lib/docker/
+sudo fdisk
+sudo fdisk -l
+sudo fdisk /dev/sdb
+sudo lvs
+sudo vgs
+sudo pvcreate /dev/sdb2
+sudo pvs
+sudo vgextend vg_datos /dev/sdb2 
+sudo pvs
+sudo vgs
+sudo lvextend -l  +100%FREE /dev/mapper/vg_datos-lv_docker
+sudo vgs
+ sudo resize2fs /dev/mapper/vg_datos-lv_docker
+df -h
+cd UTN-FRA_SO_Examenes/202406/docker
+ll
+touch Dockerfile
+ll
+vim Dockerfile
+vim index.html
+cat index.html 
+touch run.sh
+ll
+vim run.sh
+vim Dockerfile
+cat run.sh 
+docker login
+docker images
+docker built -t web1-morales .
+docker build -t web1-morales .
+vim Dockerfile
+vim Dockerfile 
+docker build -t web1-morales .
+cat Dockerfile 
+vim Dockerfile 
+docker build -t web1-morales:v1 .
+docker status
+sudo systemctl status docker
+vim Dockerfile
+rm Dockerfile
+touch dockerfile
+vim dockerfile 
+docker build -t web1-morales:v1 .
+sudo systemctl start  docker
+docker build -t web1-morales:v1 .
+vim dockerfile 
+docker build -t web1-morales:v1 .
+docker images
+ll
+cat run.sh 
+docker run  -d -p 8080:80 web1-morales
+docker run  -d -p 8080:81 web1-morales
+docker run  -d -p 8080:80 web1-morales:v1
+docker images
+docker tag web1-morales:v1 brianmorales03/web1-morales:v1
+docker push brianmorales03/web1-morales:v1
+cd
+cp  UTN-FRA_SO_Bash/Bucle_for/2_for_cmd_lista.sh .
+cd /usr/local/bin
+touch MoralesBrian_Alta_Users_Grupos.sh
+sudo MoralesBrian_Alta_Users_Grupos.sh
+sudo touch MoralesBrian_Alta_Users_Grupos.sh
+cd
+vim /usr/local/bin/MoralesBrian_Alta_Users_Grupos.sh
+sudo chmod R 777 /usr/local/bin/MoralesBrian_Alta_Users_Grupos.sh
+sudo chmod -R 777 /usr/local/bin/MoralesBrian_Alta_Users_Grupos.sh
+vim /usr/local/bin/MoralesBrian_Alta_Users_Grupos.sh
+cat /usr/local/bin/MoralesBrian_Alta_Users_Grupos.sh
+cat UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt 
+/usr/local/bin/MoralesBrian_Alta_Users_Grupos.sh UTN-FRA_SO_Examenes/202406/bash_script/Lista_Usuarios.txt
+grep  /etc/group
+grep 2P /etc/group
+cat /etc/passwd
+id 2P_202406_Prog1
+id 2P_202406_Prog2
+id 2P_202406_Supervisor
+id 2P_202406_Test1 
+history
+cd UTN-FRA_SO_Examenes/202406/docker
+ll
+cat run.sh 
+cd ../
+ll
+cd ansible/
+ll
+vim roles/2do_parcial/tasks/main.yml
+touch roles/2do_parcial/tasks/prueba_1.yml
+touch roles/2do_parcial/tasks/prueba_2.yml
+ssh localhost
+sudo systemctl status sshd
+vim roles/2do_parcial/tasks/prueba_1.yml
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+ll
+cd ../
+ll
+cd ansible/
+ll
+ansible-playbook -i inventory/hosts playbook.yml 
+vim playbook.yml 
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+cd
+ssh-add ~/.ssh/id_rsa
+ssh 127.0.0.1
+cd UTN-FRA_SO_Examenes/202406/ansible/
+ansible-playbook -i inventory/hosts playbook.yml 
+ansible-playbook -i inventory/hosts playbook.yml --become
+cd
+ssh-keygen
+ssh-copy-id localhost
+cd -
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/main.yml
+ansible-playbook -i inventory/hosts playbook.yml 
+ll
+cat ansible.cfg 
+cat playbook.yml 
+vim playbook.yml 
+vim playbook.yml 
+vim playbook.yml
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/prueba_1.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/prueba_1.yml 
+vim roles/2do_parcial/tasks/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+vim roles/2do_parcial/tasks/prueba_1.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+chmod 644 /home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml
+sudo chmod 644 /home/brian/UTN-FRA_SO_Examenes/202406/ansible/prueba_prueba_1.yml
+sudo chmod 644 /home/brian/UTN-FRA_SO_Examenes/202406/ansible/roles/2do_parcial/tasks/prueba_1.yml
+ansible-playbook -i inventory/hosts playbook.yml 
+cat playbook.yml 
+cat roles/2do_parcial/tasks/prueba_1.yml
+cat roles/2do_parcial/tasks/main.yml 
+ll
+cd roles/
+ll
+cd ../
+ll
+cat playbook.yml 
+vim playbook.yml 
+vim roles/2do_parcial/tasks/main.yml
+ansible-playbook playbook.yml
+ansible-playbook -i inventory/hosts playbook.yml 
+vim playbook.yml 
+vim roles/2do_parcial/vars/main.yml 
+ansible-playbook -i inventory/hosts playbook.yml 
+ansible-playbook -i inventory/hosts playbook.yml
+cd
+history
+history | awk 'NR>=1 && NR<=99' > /home/brian/RTA_Examen_20240624/Punto_A.sh 
+history | awk 'NR>=100 && NR<=142' > /home/brian/RTA_Examen_20240624/Punto_C.sh 
+history | awk 'NR>=142 && NR<=162' > /home/brian/RTA_Examen_20240624/Punto_B.sh 
+cd RTA_Examen_20240624/
+LL
+ll
+git init
+git commit -m "puntos A B C "
+git config --global user.email brianmp777@gmail.com
+git config --global user.name  BrianMoralesPy
+git commit -m "puntos A B C "
+git add .
+git commit -m "puntos A B C "
+git branch -M main
+git remote add origin git@github.com:BrianMoralesPy/UTNFRA_SO_2do_Parcial_Morales.git
+git push -u origin main
+cat ~/.ssh/id_rsa.pub
+git push -u origin main
+cd
+df -h
+lsblk -f
+df -h
+sudo lvs
+sudo vgs
+sudo pvs
+id 2P_202406_Prog1
+id 2P_202406_Prog2
+id 2P_202406_Supervisor
+id 2P_202406_Test1 
+copy UTN-FRA_SO_Examenes/202406/
+cp UTN-FRA_SO_Examenes/202406/
+cp UTN-FRA_SO_Examenes/202406
+clear
+mkdir corre
+cd corre/
+git clone https://github.com/upszot/UTN-FRA_SO_Examenes.git
+./UTN-FRA_SO_Examenes/202406/_checks/check_A.sh 
+./UTN-FRA_SO_Examenes/202406/_checks/check_B.sh 
+cat /usr/local/bin/MoralesBrian_Alta_Users_Grupos.sh
+./UTN-FRA_SO_Examenes/202406/_checks/check_C.sh
+cd
+cat UTN-FRA_SO_Examenes/202406/docker/dockerfile
+history | docker
+history |grep  docker
+docker ps
+docker stop 219e09d4af6a
+docker run -d -p 8080:80 brianmorales03/web1-morales
+docker run -d -p 8080:80 brianmorales03/web1-morales:v1
+curl localhost:8080
+history
+cp ~/.bash_history 
+sudo cp ~/.bash_history 
